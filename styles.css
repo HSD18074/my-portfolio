@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.navlist{
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.navlist li{
+    list-style: none;
+}
+.navlist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+}
+.left-container, .right-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.left-container{
+    background-color: #262525;
+    width: 70%;
+    padding-left: 3rem;
+}
+.right-container{
+    background: linear-gradient(-45deg ,#3877FF,#262525 70%);
+    width: 30%;
+}
+.icons .fa-brands{
+    color: #bbb;
+    font-size: 1.7rem;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.content{
+    margin-left: 4rem;
+}
+.content .intro{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.content .intro span{
+    font-size: 1.5rem;
+    color: #5DB9EE;
+}
+.content h1{
+    font-size: 4rem;
+    color: #5DB9EE;
+}
+.content .detail{
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+.btn-container button{
+    border: .1rem solid #5DB9EE;
+    font-size: 1.1rem;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+button:nth-child(1){
+    background-color: #5DB9EE;
+    color: #262525;
+}
+button:nth-child(2){
+    background: transparent;
+    color: #5DB9EE;
+    margin-left: 2rem;
+}
+button:nth-child(1):hover{
+    background: transparent;
+    color: #5DB9EE;
+}
+button:nth-child(2):hover{
+    background: #5DB9EE;
+    color: #262525;
+}
+.icons .fa-brands:hover{
+    cursor: pointer;
+    background: linear-gradient(#fff, #3877FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+.circle:nth-child(1){
+    background: linear-gradient(90deg, transparent 50%, #262525 50%);
+    width: 38rem;
+}
+.circle:nth-child(2){
+    background-image: url("image/profile.jpg");
+    background-size: 100%;
+    width: 30rem;
+    background-repeat: no-repeat;
+    border: 1rem solid white;
+    box-shadow:
+    0 0 1rem #fff, 
+    inset 0 0 1rem #fff,
+    0 0 2rem #3877FF,
+    inset 0 0 2rem #030407,
+    0 0 4rem #3877FF,
+    inset 0 0 4rem #3877FF
+    ;
+}
+.navlist li a::after, .navlist .active::after{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+}
+.navlist li a:hover::after, .navlist .active::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* About Me Section */
+.about-section {
+    padding: 5rem 10%;
+    background: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1100px;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #5DB9EE;
+    box-shadow: 0 0 10px #5DB9EE;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #5DB9EE;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-content .highlight {
+    color: #5DB9EE;
+    font-weight: bold;
+}
+
+.about-details {
+    margin: 1.5rem 0;
+}
+
+.about-details .detail {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.about-details .detail i {
+    margin-right: 0.5rem;
+    color: #5DB9EE;
+}
+
+.about-btn {
+    background: #5DB9EE;
+    color: #262525;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.about-btn:hover {
+    background: #fff;
+    color: #262525;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .about-btn {
+        font-size: 1rem;
+    }
+}
+/* Project Section */
+.project-section {
+    padding: 5rem 10%;
+    background: #262525;
+    color: white;
+    text-align: center;
+}
+
+.project-container h2 {
+    font-size: 2.5rem;
+    color: #5DB9EE;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(93, 185, 238, 0.5);
+}
+
+.project-card img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.project-info {
+    max-width: 500px;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 1.8rem;
+    color: #5DB9EE;
+}
+
+.project-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+.project-tech {
+    margin: 1rem 0;
+}
+
+.project-tech span {
+    background: #5DB9EE;
+    color: #262525;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.project-links {
+    margin-top: 1rem;
+}
+
+.project-links .btn {
+    text-decoration: none;
+    background: #5DB9EE;
+    color: #262525;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    margin-right: 1rem;
+}
+
+.project-links .btn:hover {
+    background: white;
+    color: #262525;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-card img {
+        width: 80%;
+    }
+
+    .project-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-container h2 {
+        font-size: 2rem;
+    }
+
+    .project-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-info p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Contact Me Section */
+.contact-section {
+    padding: 5rem 10%;
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    color: #5DB9EE;
+    margin-bottom: 1rem;
+}
+
+.contact-container p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #5DB9EE;
+    background: #262525;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #5DB9EE;
+    background: #262525;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    background: #5DB9EE;
+    color: #262525;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: #262525;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.contact-info i {
+    color: #5DB9EE;
+    margin-right: 0.5rem;
+}
+
+.social-icons {
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #5DB9EE;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    .contact-container h2 {
+        font-size: 2rem;
+    }
+
+    .contact-container p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+
+
